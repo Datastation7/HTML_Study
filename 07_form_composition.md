@@ -100,3 +100,78 @@
     아이디
     <input type="text"> <!--상호작용 요소 -->
 ```
+
+## fieldset 태그와 legend 태그
+
+- form 태그 안에 사용된 다양한 상호작용 요소도 fieldset 태그를 사용해 그룹 지을 수 있다.
+- fieldset 태그로 그룹을 지으면 `그룹별로 박스 모양의 테두리`가 생긴다.
+- 그룹 지은 요소들을 legend태그로 이름을 붙일 수 있다.
+
+```
+<form action="#">
+    <fieldset>
+        <legend>그룹 이름</legend>
+    </fieldset>
+</form>
+```
+
+- 예시
+
+```
+<form>
+    <fieldset>
+        <legend>기본 정보</legend>
+        <p>
+            <label for="userid">아이디</label>
+            <input type="text" id="userid">
+        </p>
+         <p>
+            <label for="passwd">비밀번호</label>
+            <input type="password" id="passwd">
+        </p>
+    </fieldset>
+</form>
+```
+</br>
+
+- 결과
+
+![alt images](./Images/fieldset_legend.png)
+</br>
+## textarea 태그
+- `여러 줄의 입력 요소를 생성`할 때 input 태그가 아닌 textarea 태그를 사용한다.
+- 웹 사이트에서 글을 작성할 때 사용하는 입력 요소는 대부분 textarea 태그로 생성한다.
+
+```
+<textarea>초깃값</textarea>
+```
+
+- textarea는 input 태그와는 다르게 닫는 태그가 있다.
+- input 태그로 생성한 입력 요소의 초깃값을 value 속성으로 정의하지만, textarea 태그로 생성한 여러 줄의 입력 요소는 콘텐츠 영역에 초깃값을 정의한다.
+</br>
+
+- 예제
+```
+<form action="#" method="post">
+    <fieldset>
+        <legend>블로그 글쓰기</legend>
+        <p>
+            <label for="title">제목
+            <input type="text" id="title" name="title">
+            </label>
+        </p>
+        <p>
+            <label for="desc">내용
+            <textarea id="desc" name="title"></textarea>
+            </label>
+        </p>
+    </fieldset>
+</form>
+```
+</br>
+
+- 결과
+
+![alt images](./Images/input_textarea.png)
+
+</br>
