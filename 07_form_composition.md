@@ -80,16 +80,16 @@
 ```
 
 ### name 속성
-- 입력 요소의 이름을 작성한다.
+- `입력 요소의 이름을 작성`한다.
 - 입력 요소가 form 태그에 의해 서버로 전송될 때 name 속성에 적힌 값이 이름으로 지정된다.
 - 서버에서는 지정된 이름으로 입력 요소를 식별할 수 있다.
 
 ### value 속성
-- 입력 요소의 초기값을 작성한다.
+- `입력 요소의 초기값을 작성`한다.
 - 입력 요소는 보통 사용자에게서 수동으로 값을 입력받지만, 상황에 따라 초깃값을 설정해야 하는 경우가 있을 때 사용하는 속성이다.
 
 ## label 태그
-- form 태그 안에서 사용하는 상호작용 요소에 이름을 붙일 때 사용한다.
+- form 태그 안에서 사용하는 상호작용 요소에 `이름을 붙일 때 사용`한다.
 - label 태그를 잘 사용하면 label 태그만 클릭해도 상호작용 요소를 선택할 수 있다.
 - label 태그는 사용하는 방법에 따라 암묵적인 방법과 명시적인 방법으로 구분한다.
 
@@ -146,7 +146,7 @@
 <textarea>초깃값</textarea>
 ```
 
-- textarea는 input 태그와는 다르게 닫는 태그가 있다.
+- ` textarea는 input 태그와는 다르게 닫는 태그가 있다.`
 - input 태그로 생성한 입력 요소의 초깃값을 value 속성으로 정의하지만, textarea 태그로 생성한 여러 줄의 입력 요소는 콘텐츠 영역에 초깃값을 정의한다.
 </br>
 
@@ -177,9 +177,9 @@
 </br>
 
 ## select, option, optgroup 태그
-- select 태그를 사용하면 콤보박스를 생성할 수 있다.
-- 콤보박스에 항목 하나를 추가할 때는 option 태그를 사용한다.
-- 항목들을 그룹으로 묶고 싶으면 optgroup 태그를 사용한다.
+- `select 태그를 사용하면 콤보박스를 생성`할 수 있다.
+- `콤보박스에 항목 하나를 추가할 때는 option 태그를 사용`한다.
+- `항목들을 그룹으로 묶고 싶으면 optgroup 태그를 사용`한다.
 
 ```
 <select>
@@ -240,3 +240,200 @@
 - 결과
 
 ![alt images](./Images/select_optgroup_option.png)
+
+### size 속성
+- `콤보박스에서 화면에 노출되는 항목 개수를 지정하는 속성`이다.
+- 속성 값으로 숫자를 적으면 된다.
+- 생략할 경우 기본으로 1개 항목이 표시된다.
+
+```
+<select name="country" id="country" size="3">
+    <option value="대한민국">대한민국</option>
+    <option value="캐나다">캐나다</option>
+    <option value="미국">미국</option>
+    <option value="중국">중국</option>
+    <option value="일본">일본</option>
+</select>
+```
+</br>
+
+- 결과
+
+![alt images](./Images/select_option_size.png)
+
+### multiple 속성
+- `여러 항목을 동시에 선택`할 수 있다.
+- 콤보박스에서 항목 하나를 선택한 상태로 ctrl(맥OS는 cmd)을 누르고, 다른 항목을 클릭하면 된다.
+
+```
+<select name="country" id="country" multiple>
+    <option value="대한민국">대한민국</option>
+    <option value="캐나다">캐나다</option>
+    <option value="미국">미국</option>
+    <option value="중국">중국</option>
+    <option value="일본">일본</option>
+</select>
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/select_option_multiple.png)
+
+### selected 속성
+- selected 속성을 사용하면 `기본 선택 항목을 변경할 수 있다.`
+- 예를 들면 '미국'의 option 태그에 selected 속성을 사용해서 콤보박스의 기본값으로 미국이 표시된다.
+
+```
+<select name="country" id="country">
+    <option value="대한민국">대한민국</option>
+    <option value="캐나다">캐나다</option>
+    <option value="미국" selected>미국</option>
+    <option value="중국">중국</option>
+    <option value="일본">일본</option>
+</select>
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/selected.png)
+
+## button 태그
+- input 태그에서 type 속성값을 submit, reset, button 으로 지정해 생성할 수 있다.
+- 별도의 button 태그로 생성할 수 있다.
+- button 태그도 마찬가지로 type 속성을 가진다.
+
+```
+<button type="종류">버튼 내용</button>
+```
+
+- `type 속성 값은 폼에 서버에 전송할 목적이면 submit, 상호작용 요소에 입력된 내용을 초기화하는 버튼이면 reset, 단순한 버튼이면 button으로 지정한다.`
+
+```
+<button type="submit">submit</button>
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/button_submit.png)
+
+## 폼 관련 태그에서 사용할 수 있는 추가 속성
+
+### disabled 속성
+- disabled 속성은 상호작용 요소를 비활성화한다.
+- input, textarea, select, button 태그에 사용할 수 있다.
+- 태그가 비활성화되면 입력 요소는 텍스트를 입력할 수 없다.
+- 목록 상자는 항목을 선택할 수 없다.
+- 버튼 요소는 버튼을 클릭할 수 없다.
+
+```
+<태그 disabled>
+```
+
+- 예를 들어 input 태그와 button태그를 비활성화하려면 해당 태그에 disabled 속성을 추가하면 된다.
+
+```
+<input type="text" disabled>
+<button type="button" disabled>비활성화</button>
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/disabled.png)
+
+### readonly 속성
+- `상호작용 요소를 읽기 전용으로 변경`한다.
+- 읽기 전용으로 변경되면 입력 요소에 텍스트를 입력할 수 없지만, 요소를 선택하거나 드래그해서 내용을 복사할 수 있다.
+- readonly 속성은 상호작용 요소를 생성할 수 있는 태그 중 textarea 태그와 input 태그에서 사용할 수 있다.
+- 다만 input 태그에서는 type 속성이 text, search, url, tel, email, password, date, month, week, time, datetime-local, number일 때만 사용할 수 있다.
+
+```
+<태그 readonly>
+```
+- 입력 요소에 텍스트를 입력할 수는 없지만, 마우스로 요소를 클릭할 수는 있다.
+
+```
+<input type="text" readonly>
+</br>
+<textarea readonly></textarea>
+```
+
+- 결과
+
+![alt images](./Images/readonly.png)
+
+### maxlength 속성
+- `입력할 수 있는 글자 수를 제한`한다.
+- 속성 값으로는 숫자를 입력한다.
+- textarea 태그와 input 태그의 type 속성이 text, search, url, email, password, date, month, week, time, datetime-local, number일 때 사용할 수 있다.
+
+```
+<태그 maxlength="숫자">
+```
+
+- maxlength 속성 값을 8로 설정하면 8글자까지만 입력할 수 있다.
+
+```
+<input type="text" maxlength="8">
+</br>
+<textarea maxlength="8"></textarea>
+```
+</br>
+
+- 결과
+
+![alt images](./Images/maxlength.png)
+
+### checked 속성
+- `요소를 선택된 상태로 표시`한다.
+- 선택 요소가 있어야 하므로 input 태그와 type 속성이 checkbox나 radio인 요소에만 사용할 수 있다.
+
+```
+<태그 checked>
+```
+
+- 예를 들어 strawberry에 checked 속성을 사용하면 strawberry가 선택된 상태로 웹 브라우저에 표시된다.
+
+```
+<fieldset>
+    <legend>좋아하는 과일</legend>
+    <input type="checkbox" id="apple" name="apple" value="apple">
+    <label for="apple">apple</label><br>
+    <input type="checkbox" id="orange" name="orange" value="orange">
+    <label for="orange">orange</label><br>
+    <input type="checkbox" id="strawberry" name="strawberry" value="strawberry" checked>
+    <label for="strawberry">strawberry</label><br>
+</fieldset>
+```
+
+- 결과
+
+![alt images](./Images/checked.png)
+
+### placeholder 속성
+- `입력 요소에 어떠한 값을 입력하면 되는 지 힌트를 적는 용도로 사용한다.`
+- 예를 들어 input 태그의 type 속성을 tel로 지정하면 연락처를 입력해야 한다.
+- 웹 브라우저에 표시되는 tel 요소는 text 요소와 차이가 없다.
+- 하지만 placeholder 속성으로 입력값에 대한 힌트를 적어주면 사용자가 올바른 입력값을 넣도록 유도할 수 있다.
+
+```
+<input placeholder="입력값에 대한 힌트">
+```
+
+```
+<input type="tel" placeholder="연락처를 입력해 주세요.">
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/placeholder.png)
+
