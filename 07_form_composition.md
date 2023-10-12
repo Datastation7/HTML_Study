@@ -175,3 +175,68 @@
 ![alt images](./Images/input_textarea.png)
 
 </br>
+
+## select, option, optgroup 태그
+- select 태그를 사용하면 콤보박스를 생성할 수 있다.
+- 콤보박스에 항목 하나를 추가할 때는 option 태그를 사용한다.
+- 항목들을 그룹으로 묶고 싶으면 optgroup 태그를 사용한다.
+
+```
+<select>
+    <optgroup label="그룹 이름">
+        <option value="서버에 전송할 값">웹 브라우저에 표시할 값</option>
+    </optgroup>
+</select>
+```
+
+- option 태그는 서버에 전송할 값을 value 속성으로 지정할 수 있다.
+- 속성을 생략하면 option 태그의 콘텐츠는 적은 텍스트가 값으로 전송된다.
+- optgroup 태그로 항목들을 그룹 지을 때 반드시 label 속성으로 그룹명을 지정해야 한다.
+
+</br>
+
+- 예시 1
+
+```
+<select name="country" id="country">
+    <option value="대한민국">대한민국</option>
+    <option value="캐나다">캐나다</option>
+    <option value="미국">미국</option>
+    <option value="중국">중국</option>
+    <option value="일본">일본</option>
+</select>
+```
+
+</br>
+
+- 결과
+
+![alt images](./Images/select_option.png)
+
+</br>
+
+- 예시 2
+
+```
+<select name="country" id="country">
+    <optgroup label="대한민국">
+        <option value="서초구">서초구</option>
+        <option value="강남구">강남구</option>
+        <option value="서대문구">서대문구</option>
+        <option value="강서구">강서구</option>
+        <option value="강북구">강북구</option>
+    </optgroup>
+    <optgroup label="캐나다">
+        <option value="밴쿠버">밴쿠버</option>
+        <option value="토론토">토론토</option>
+        <option value="몬트리올">몬트리올</option>
+        <option value="오타와">오타와</option>
+        <option value="빅토리아">빅토리아</option>
+    </optgroup> 
+</select>
+```
+</br>
+
+- 결과
+
+![alt images](./Images/select_optgroup_option.png)
