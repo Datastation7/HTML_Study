@@ -98,5 +98,5 @@
 ```
 <label>
     아이디
-    <input type="text"> !---
+    <input type="text"> <!--상호작용 요소 -->
 ```
